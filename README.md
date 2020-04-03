@@ -33,7 +33,7 @@ namespace Patterns\Blocks\TestBlock;
 
 use Rareloop\Lumberjack\AcfBlocks\AcfBlock;
 
-class TestBlock extends AcfBlock
+class MyBlock extends AcfBlock
 {
     /**
      * Provide the data to pass to the template
@@ -56,7 +56,7 @@ class TestBlock extends AcfBlock
     public static function blockConfig(): array
     {
         return [
-            'name'              => 'raretestblock',
+            'name'              => 'mytestblock',
             'title'             => __('Test Block'),
             'description'       => __('A first go with a block.'),
             'category'          => 'formatting',
