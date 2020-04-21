@@ -29,7 +29,7 @@ _Note: Pebble maps the namespace `\Patterns` to the directory `my-theme/resource
 ```php
 <?php
 
-namespace Patterns\Blocks\TestBlock;
+namespace Patterns\Blocks\MyBlock;
 
 use Rareloop\Lumberjack\AcfBlocks\AcfBlock;
 
@@ -70,6 +70,18 @@ class MyBlock extends AcfBlock
 The `blockConfig()` function is what ACF uses to register the block with WordPress. For more configuration options please see the [ACF documentation](https://www.advancedcustomfields.com/resources/acf_register_block_type/).
 
 The `context()` function is where you provide the data for your patterns `template.twig` file when used in WordPress. Within this function, all calls to `get_field()` will be scoped to the current Gutenberg block, as is the case with other ACF Blocks.
+
+The final step is to add the class to your `config/acfblocks.php` file:
+
+```php
+<?php
+
+return [
+    'blocks' => [
+        \Patterns\Blocks\MyBlock\MyBlock::class,
+    ]
+];
+```
 
 ### Additional Parameters
 
