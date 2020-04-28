@@ -12,7 +12,7 @@ Once installed, register the Service Provider in config/app.php:
 'providers' => [
     ...
 
-    Rareloop\Lumberjack\AcfBlocks\AcfBlocksServiceProvider::class,
+    Rareloop\Lumberjack\AcfBlocks\AcfBlocksProvider::class,
 
     ...
 ],
